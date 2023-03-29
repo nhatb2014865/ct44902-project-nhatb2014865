@@ -2,11 +2,15 @@
 
 Học kỳ 2, Năm học 2022-2023
 
-MSSV 1 : B2014865
+**MSSV 1** : 
 
-Họ tên SV 1: Nguyễn Minh Nhật
+**Họ tên SV 1**:
 
-Lớp học phần: H01
+**MSSV 2**:
 
-Tên dự án: Web xem anime Bliibiitv
+**Họ tên SV 2**:
+
+**Lớp học phần**:
+
+**Tên dự án**:
 
