@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch | Bliibii TV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/client/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-e8f3ee p-0" style="--bs-bg-opacity: 1 !important">
+        <div class="container-fluid mx-5 p-0">
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0 me-3 p-0" href="#">
+                <img class="brand-logo" src="../assets/client/images/logo-with-brand.png" alt="">
+            </a>
+            <div class="nav me-auto">
+                <div class="nav-item">
+                    <a class="nav-link px-0 pe-3 active" aria-current="page" href="#">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link px-0 pe-3" href="#">Link</a>
+                </div>
+                <div class="link-collapse nav-item dropdown-center">
+                    <div class="nav-link dropdown-toggle px-0 me-3" aria-expanded="true"></div>
+                    <div class="dropdown-menu">
+                        <ul class="dropdown-container bg-e8f3ee">
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link" href="#">Link</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link" href="#">Link</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link" href="#">Link</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link" href="#">Link</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                                <a class=" nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-md offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width: 300px;">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-e8f3ee">
+                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(../assets/client/images/3.png);">
+                        <a class="nav-link dropdown-toggle" href="#" aria-expanded="false"></a>
+                        <div class="dropdown-menu p-0">
+                            <div class="card user-panel dropdown-container" style="width: 18rem;">
+                                <div class="user-info p-3 m-0">
+                                    <div class="user-img" style="background-image: url(../assets/client/images/3.png);"></div>
+                                    <div class="d-flex align-items-center ms-2">
+                                        <span class="user-name">User name</span>
+                                    </div>
+                                </div>
+                                <ul class="card-body p-0 m-0">
+                                    <li>
+                                        <a class="dropdown-item nav-link p-2 px-3" href="#">
+                                            <div class="row">
+                                                <div class="col-2"><i class="fa-solid fa-bookmark"></i></div>
+                                                <div class="col"><span class="">Watch later</span></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item nav-link p-2 px-3" href="#">
+                                            <div class="row">
+                                                <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
+                                                <div class="col"><span class="">Log out</span></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-user">
+                        <div class="user-info p-4 m-0 mb-2">
+                            <div class="user-img" style="background-image: url(../assets/client/images/3.png);"></div>
+                            <div class="d-flex align-items-center ms-3">
+                                <span class="user-name">User name</span>
+                            </div>
+                        </div>
+                        <div class="p-0 m-0">
+                            <div>
+                                <a class="nav-link p-2 px-4" href="#">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa-solid fa-user"></i></div>
+                                        <div class="col"><span class="">My account</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link p-2 px-4" href="#">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa-solid fa-bookmark"></i></div>
+                                        <div class="col"><span class="">Watch later</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link p-2 px-4" href="#">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
+                                        <div class="col"><span class="">Log out</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="d-flex search-form" role="search">
+                <div class="input-group search-input-container input-group-sm border rounded bg-e8f3ee" style="--bs-bg-opacity: 0.5">
+                    <input class="search-input form-control bg-opacity-10" placeholder="Search your favorite!" aria-label="Search">
+                    <button class="clear-btn btn btn-close rounded-circle" type="reset" style="display: none !important;"></button>
+                    <a class="btn search-icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </form>
+            <div class="sub-nav nav">
+                <div class="sub-nav-slider owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="watch-area-container row p-0 bg-e8f3ee">
+            <div class="col-lg-8 col-12 p-0">
+                <div class="player-ctn">
+                    <video id="video-player" class="video-js vjs-16-9" muted controls preload="auto" poster="../assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" data-setup="{}">
+                        <source
+                            src="https://scontent.cdninstagram.com/v/t39.25447-2/10000000_1890242298001956_4799001332015864022_n.mp4?_nc_cat=111&vs=203fae3ae23a5be5&_nc_vs=HBksFQAYJEdJQ1dtQUFrT3JaVUtyY0dBTmFZYmdkSmVwbENibWRqQUFBRhUAAsgBABUAGCRHSUNXbUFEMjN4TnpRcFlBQU9lZmVDeFBYdTA2YnJGcUFBQUYVAgLIAQBLB4gScHJvZ3Jlc3NpdmVfcmVjaXBlATENc3Vic2FtcGxlX2ZwcwAQdm1hZl9lbmFibGVfbnN1YgAgbWVhc3VyZV9vcmlnaW5hbF9yZXNvbHV0aW9uX3NzaW0AKGNvbXB1dGVfc3NpbV9vbmx5X2F0X29yaWdpbmFsX3Jlc29sdXRpb24AHXVzZV9sYW5jem9zX2Zvcl92cW1fdXBzY2FsaW5nABFkaXNhYmxlX3Bvc3RfcHZxcwAVACUAHAAAJu7lxtXfi2AVAigCQzMYC3Z0c19wcmV2aWV3HBdAllg2RaHKwRg0ZGFzaF9pNGxpdGViYXNpY19wYXNzdGhyb3VnaGFsaWduZWRfaHEyX2ZyYWdfMl92aWRlbxIAGBh2aWRlb3MudnRzLmNhbGxiYWNrLnByb2Q4ElZJREVPX1ZJRVdfUkVRVUVTVBsKiBVvZW1fdGFyZ2V0X2VuY29kZV90YWcGb2VwX2hkE29lbV9yZXF1ZXN0X3RpbWVfbXMBMAxvZW1fY2ZnX3J1bGUHdW5tdXRlZBNvZW1fcm9pX3JlYWNoX2NvdW50ATARb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZA8yNDQ2MTc3NjEyNDk1MDcSb2VtX3ZpZGVvX2Fzc2V0X2lkDzc5MDQ1NDg0MjQzNzM3MhVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPMjExMzA4MDUxNDg3MDk1HG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQPNzY0MDY2OTI1MDM2OTI0DnZ0c19yZXF1ZXN0X2lkACUCHAAlxAEbB4gBcwQ3OTE4AmNkCjIwMjMtMDMtMjQDcmNiATADYXBwBVZpZGVvAmN0GUNPTlRBSU5FRF9QT1NUX0FUVEFDSE1FTlQTb3JpZ2luYWxfZHVyYXRpb25fcwgxNDMwLjIwOAJ0cxVwcm9ncmVzc2l2ZV9lbmNvZGluZ3MA&ccb=1-7&_nc_sid=41a7d5&efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ohc=O5e6nNyyL-AAX_uuIOc&_nc_ht=scontent-prg1-1.xx&oh=00_AfAcmV7_EiK0xubCHFGz3KRKKv9lDDlpRGiXYdwMDNYG7Q&oe=64233A41&_nc_rid=639898301172637.mp4"
+                            type="video/mp4" />
+                        <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 p-3">
+                <div class="player-slider-bar bg-e8f3ee">
+                    <ul class="player-slider-header nav nav-tabs">
+                        <li class="nav-item">
+                            <button class="slider-item nav-link active" data-bbt-target="#episodes-list">Episodes</button>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <button class="slider-item nav-link" data-bbt-target="#comments-list">Comment</button>
+                        </li>
+                    </ul>
+                    <div class="player-slider-body">
+                        <div id="episodes-list" class="episodes-list body-item list-group expand">
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action playing">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <div class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel ut?
+                                </div>
+                                <div class="play-icon">
+                                    <span class="bar n1">A</span>
+                                    <span class="bar n2">B</span>
+                                    <span class="bar n3">C</span>
+                                    <span class="bar n4">D</span>
+                                    <span class="bar n5">E</span>
+                                    <span class="bar n6">F</span>
+                                    <span class="bar n7">G</span>
+                                    <span class="bar n8">H</span>
+                                    <span class="bar n9">J</span>
+                                </div>
+                            </a>
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <span class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel
+                                    ut?</span>
+                            </a>
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <span class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel
+                                    ut?</span>
+                            </a>
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <span class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel
+                                    ut?</span>
+                            </a>
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <span class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel
+                                    ut?</span>
+                            </a>
+                            <a href="#" class="episode-wrapper list-group-item list-group-item-action">
+                                <img class="episode-wrapper-img" src="../assets/login/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" alt="thumnail">
+                                <span class="title ms-2">Episode - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati ullam voluptatum nihil sapiente reprehenderit modi explicabo accusamus molestiae, minima, nam quasi, libero necessitatibus porro tempora cum repellat vel
+                                    ut?</span>
+                            </a>
+                        </div>
+                        <div id="comments-list" class="comments-list body-item list-group">
+                            <div class="comment-input-ctn list-group-item list-group-item-action">
+                                <div class="textarea-box position-relative">
+                                    <textarea class="comment-input" rows="2" placeholder="Comment"></textarea>
+                                    <div class="char-count">0/280</div>
+                                </div>
+                                <div class="btn-ctn mt-2 ms-auto">
+                                    <button class="cancel-btn btn">Cancel</button>
+                                    <button class="submit-btn btn">Submit</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action pb-2">
+                                <div class="comment-left">
+                                    <div class="author-avata">
+                                        <img class="pic" src="../assets/client/images/1.png" alt="avata">
+                                    </div>
+                                </div>
+                                <div class="comment-right ms-2">
+                                    <div class="author-name">Minh Nhật</div>
+                                    <div class="comment-ctn mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eveniet, ipsa ea vel nobis aut vero aspernatur quae dicta totam pariatur voluptatibus sed earum tempora modi quos, eos, ratione harum.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-area-info">
+            <div class="player-name-title mb-2"><a class="more-info" target="_blank" href="#">Anime name</a> - Episode #</div>
+            <div class="player-info-ctn">
+                <div class="rating-ctn mb-2">
+                    <div class="player-info-score"><i class="fa-solid fa-star"></i> 5.0</div>
+                    <div class="rating-count ms-1">( <span>999 ratings</span> )</div>
+                    <div class="own-rating btn-group dropend ms-1">
+                        <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" autoClose="false">Rating now</div>
+                        <ul class="dropdown-menu p-0">
+                            <li class="rating-drop dropdown-item p-0">
+                                <div class="own-score">
+                                    <input name="own-score" type="radio" id="st5" value="5">
+                                    <label for="st5"></label>
+                                    <input name="own-score" type="radio" id="st4" value="4">
+                                    <label for="st4"></label>
+                                    <input name="own-score" type="radio" id="st3" value="3">
+                                    <label for="st3"></label>
+                                    <input name="own-score" type="radio" id="st2" value="2">
+                                    <label for="st2"></label>
+                                    <input name="own-score" type="radio" id="st1" value="1">
+                                    <label for="st1"></label>
+                                </div>
+                            </li>
+                            <li class="rt-score text-center mb-2">Click to rate</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex text-black align-items-center">
+                    <div class="player-info-year">2023</div>
+                    <div class="player-info-update">12 Episode</div>
+                    <div class="btn show-more"></div>
+                </div>
+                <div class="player-desc">
+                    <div class="d-flex decs-category mb-2">
+                        <div class="decs-category-item me-2 mb-1 px-2 ">category1</div>
+                        <div class="decs-category-item me-2 mb-1 px-2 ">category2</div>
+                    </div>
+                    <span class="key"> Description: </span>
+                    <span class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem possimus cum nam labore totam molestiae vel dignissimos quibusdam commodi! Corporis iusto rerum labore consequuntur totam fugit odit quia eveniet error dolor dolore libero commodi alias omnis qui
+                        enim dolorem, reiciendis ad quam dicta magnam deleniti? Impedit eius neque ex, qui ab natus autem doloribus omnis. Iusto officiis quaerat rem quidem dolorem, excepturi dolore eum! Itaque quia molestias voluptatibus voluptatem quae? Culpa odio nihil et optio porro corporis
+                        voluptates iste eligendi veniam architecto. Veniam quas modi quisquam quibusdam inventore officiis aliquid est porro tenetur ipsa dolorem praesentium aliquam, consequatur earum obcaecati!</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-info px-5 mb-3"><span>Copyright © 2023 Bliibiitv All Rights Reserved</span></div>
+        <div class="back-to-top-btn" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="tooltip-back-to-top" data-bs-title="Back to top"><i class="fa-solid fa-chevron-up"></i></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+    <script src="../assets/client/js/main.js"></script>
+</body>
+
+</html>
