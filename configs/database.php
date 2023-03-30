@@ -1,7 +1,7 @@
 <?php
-$config['database'] = [
+$__config['database'] = [
     'hostname'  => 'localhost',
     'username'  => 'root',
     'password'  => '',
-    'database'  => 'bliibiitv'
+    'database'  => 'ct275-project-bliibiitv'
 ];

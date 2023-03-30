@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ## webkit-scrollbar style start ## */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+::-webkit-scrollbar {
+    width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track:hover {
+
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5d60;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* ## webkit-scrollbar style end ## */
+
+/* responsive screen */
+@media only screen and (max-width: 575px) {
+    .signin-container-right>.container {
+        width: 300px !important;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .signin-container-right>.container {
+        width: 450px !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    body {
+        min-width: 300px;
+    }
+
+    .signin-container-right {
+        transition: all 0.25s ease-in;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .signin-container-left {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .signin-container-right>.container {
+        width: 350px !important;
+    }
+}
+
+/*  */
+
+/* bootstrap */
+.carousel-caption-secondary {
+    padding: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+    background: transparent;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, .1), rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn-6bc3e7 {
+    --bs-btn-color: rgb(255, 255, 255);
+    --bs-btn-bg: #5fb8db;
+    --bs-btn-border-color: #66c1e6;
+    --bs-btn-hover-color: rgb(255, 255, 255);
+    --bs-btn-hover-bg: #20a9e4;
+    --bs-btn-hover-border-color: #27a6dd;
+    --bs-btn-focus-shadow-rgb: 11, 172, 204;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #3dd5f3;
+    --bs-btn-active-border-color: #25cff2;
+    --bs-btn-active-shadow: inset 0 3px 5pxrgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #0dcaf0;
+    --bs-btn-disabled-border-color: #0dcaf0;
+}
+
+.link-5a5d60 {
+    color: #5a5d60 !important;
+}
+
+.link-5a5d60:hover {
+    color: #0a58ca !important;
+    text-decoration: underline !important;
+}
+
+.fs-sml {
+    font-size: smaller;
+}
+
+.fs-sm {
+    font-size: small !important;
+}
+
+.form-control-secondary {
+    background: #e8f3ee !important;
+    border: 1px solid #5a5d60;
+    color: #5a5d60 !important;
+}
+
+.form-control-secondary:focus {
+    background-color: #e8f3ee;
+    border-color: #ddddf5;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgb(107 195 231);
+}
+
+.form-float-label {
+    background: #e8f3ee !important;
+    left: 1rem;
+    top: -0.85rem;
+    position: absolute;
+    padding: 0 0.5rem;
+    font-size: smaller;
+    color: #5a5d60;
+}
+
+.logo {
+    width: 250px;
+}
+
+.signin-container-right {
+    min-height: 100vh;
+    box-shadow: 3px 0 28px rgb(116 116 116 / 50%);
+}
+
+.signin-container-left {
+    background-image: url(../images/gradienta-faXXUrNbH1c-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}

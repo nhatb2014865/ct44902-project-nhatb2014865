@@ -13,8 +13,8 @@ class database
 
     private static function connect()
     {
-        global $config;
-        extract($config['database']);
+        global $__config;
+        extract($__config['database']);
 
         if (!empty($database)) {
             try {

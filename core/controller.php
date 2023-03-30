@@ -1,9 +1,11 @@
 <?php
 class controller
 {
-    public static function getModel($model)
+    public static function getModel($modelUrl)
     {
-        require '' . _dir_root . '/models/' . $model . '.php';
+        require _dir_root . '/models/' . $modelUrl . '.php';
+        $model = array_filter(explode('/', $modelUrl));
+        $model = $model[array_key_last($model)];
         $model = new $model();
         return $model;
     }

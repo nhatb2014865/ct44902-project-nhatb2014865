@@ -9,8 +9,6 @@ require_once _dir_root . '/core/controller.php';
 require_once _dir_root . '/core/database.php';
 require_once _dir_root . '/core/model.php';
 require_once _dir_root . '/core/session.php';
-require_once _dir_root . '/core/response.php';
-require_once _dir_root . '/core/request.php';
 require_once _dir_root . '/core/route.php';
 
 session::init();

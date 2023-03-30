@@ -1,3 +1,6 @@
 <?php
-$config['controller'] = 'home';
-$config['action'] = 'index';
+$__config['controller'] = [
+    'path' => 'client',
+    'name' => 'home',
+    'action' => 'index'
+];
