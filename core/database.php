@@ -1,10 +1,8 @@
 <?php
 
-use Exception as GlobalException;
-
 class database
 {
-    protected static $conn;
+    private static $conn;
 
     public function __construct()
     {
@@ -18,23 +16,59 @@ class database
 
         if (!empty($database)) {
             try {
-                if (!self::$conn)
-                    self::$conn = mysqli_connect($hostname, $username, $password, $database);
-            } catch (GlobalException $ex) {
-                // render databaseError;
-                die($ex->getMessage());
+                if (!self::$conn) {
+                    $dsn = 'mysql:host=' . $hostname . ';dbname=' . $database;
+                    $options = array(
+                        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                    );
+                    self::$conn = new PDO($dsn, $username, $password, $options);
+                }
+            } catch (PDOException $e) {
+                die($e->getMessage());
             }
         } else
-            echo 'Không xác định được database hãy kiểm tra lại file config database';
+            echo 'Có lỗi khi kết nối với Data hãy kiểm tra lại file config database';
     }
 
-    protected static function runQuery($query = '')
+    public static function runQuery($query = '')
     {
-        if (!empty($query)) {
-            $data = self::$conn->query($query);
-            if (!is_bool($data)) {
-                return $data;
-            }
-        } else echo 'Lỗi cú pháp truy vấn database';
+        try {
+            $data = self::$conn->prepare($query);
+            $data->execute();
+            return $data;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectDB($table, $selectField, $condition)
+    {
+        $query = "SELECT $selectField FROM $table $condition";
+        self::runQuery($query);
+    }
+
+    public function insertDB($table, $selectField, $values)
+    {
+        $query = "INSERT INTO $table ( $selectField ) VALUES ( $values )";
+        $status = self::runQuery($query);
+        if ($status) return true;
+        else return false;
+    }
+
+    public function updateDB($table, $updateStr, $condition)
+    {
+        $query = "UPDATE $table SET $updateStr $condition";
+        $status = self::runQuery($query);
+        if ($status) return true;
+        else return false;
+    }
+
+    public function deleteDB($table, $condition)
+    {
+        $query = "DELETE FROM $table $condition";
+        $status = self::runQuery($query);
+        if ($status) return true;
+        else return false;
     }
 }

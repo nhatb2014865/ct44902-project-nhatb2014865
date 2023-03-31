@@ -5,6 +5,7 @@ require_once _dir_root . '/configs/controller.php';
 require_once _dir_root . '/configs/route.php';
 
 //load core files
+require_once _dir_root . '/core/querybuilder.php';
 require_once _dir_root . '/core/controller.php';
 require_once _dir_root . '/core/database.php';
 require_once _dir_root . '/core/model.php';

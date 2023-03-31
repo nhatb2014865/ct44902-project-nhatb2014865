@@ -1,20 +1,18 @@
 <?php
-class model extends database
+class model
 {
-    protected static function select($table = '', $scope = '', $condition = '')
+    private $db;
+
+    use querybuilder;
+
+    function __construct()
     {
-        $query = 'SELECT ' . $scope . ' FROM ' . $table . ' ' . $condition;
-        $data = self::runQuery($query);
-        return $data;
+        $this->db = new database();
     }
 
-    protected static function insert($table = '', $attribute = 'attr1, attr2,....', $value = '"val1", "val2",.....')
+    private static function fetchAll($pdo_Obj)
     {
-        $query = 'INSERT INTO ' . $table . ' (' . $attribute . ') VALUES (' . $value . ')';
-        self::runQuery($query);
-    }
-
-    protected static function update()
-    {
+        $arr_Data = $pdo_Obj->fetch(PDO::FETCH_ASSOC);
+        return $arr_Data;
     }
 }

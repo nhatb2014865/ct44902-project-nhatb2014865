@@ -1,9 +1,19 @@
 <?php
 class signinModel extends model
 {
-    public static function index()
+    public $model;
+
+    function __construct()
     {
-        self::insert('tlb_user','id, user, pass','"2", "cus", "000000"');
-        
+        $this->model = new model();
+    }
+
+    public function index()
+    {
+    }
+
+    public function getUserData()
+    {
+        $this->model->table('tb_user')->select('password,fullname')->values(array('111111','son thuy'))->where('id_user','=','4')->update();
     }
 }
