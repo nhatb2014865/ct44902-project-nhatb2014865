@@ -33,7 +33,7 @@ trait querybuilder
     {
         $select_Arr = explode(',', $this->selectField);
         $values_Arr = explode(',', $this->values);
-        $updateStr='';
+        $updateStr = '';
         foreach ($select_Arr as $key => $value) {
             $updateStr .= "$value = $values_Arr[$key] ,";
         }
@@ -45,6 +45,9 @@ trait querybuilder
 
     protected function delete()
     {
+        $deleteStatus = $this->db->deleteDB($this->tableName, $this->where);
+        $this->resetQuery();
+        return $deleteStatus;
     }
 
     protected function table($tableName)

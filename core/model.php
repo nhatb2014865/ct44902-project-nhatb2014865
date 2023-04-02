@@ -1,13 +1,15 @@
 <?php
 class model
 {
-    private $db;
+    protected $db;
+    protected $request;
 
     use querybuilder;
 
     function __construct()
     {
         $this->db = new database();
+        $this->request=new request();
     }
 
     private static function fetchAll($pdo_Obj)

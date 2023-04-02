@@ -215,6 +215,11 @@ a {
     align-self: center;
 }
 
+.navbar .user-side .dropdown-toggle{
+    width: 100%;
+    height: 100%;
+}
+
 .navbar .user-side .dropdown-toggle::after {
     display: none;
 }

@@ -5,10 +5,8 @@ class session{
     }
 
     public static function checkSession(){
-        
     }
 
     public static function destroy(){
-        session_unset();
     }
 }

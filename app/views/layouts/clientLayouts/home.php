@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo _web_root ?>/assets/client/css/style.css">
+    <link rel="stylesheet" href="<?php echo _web_root; ?>/assets/client/css/style.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand m-0 me-3 p-0" href="#">
-                <img class="brand-logo" src="<?php echo _web_root ?>/assets/client/images/logo-with-brand.png" alt="">
+                <img class="brand-logo" src="<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png" alt="">
             </a>
             <div class="nav me-auto">
                 <div class="nav-item">
@@ -59,12 +59,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body bg-e8f3ee">
-                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php echo _web_root ?>/assets/client/images/3.png);">
-                        <a class="nav-link dropdown-toggle" href="#" aria-expanded="false"></a>
+                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php echo _web_root; ?>/assets/client/images/3.png);">
+                        <a class="nav-link dropdown-toggle" href="<?php echo _web_root; ?>signin" aria-expanded="false"></a>
                         <div class="dropdown-menu p-0">
                             <div class="card user-panel dropdown-container" style="width: 18rem;">
                                 <div class="user-info p-3 m-0">
-                                    <div class="user-img" style="background-image: url(<?php echo _web_root ?>/assets/client/images/3.png);"></div>
+                                    <div class="user-img" style="background-image: url(<?php echo _web_root; ?>/assets/client/images/3.png);"></div>
                                     <div class="d-flex align-items-center ms-2">
                                         <span class="user-name">User name</span>
                                     </div>
@@ -91,12 +91,12 @@
                         </div>
                     </div>
                     <div class="menu-user">
-                        <div class="user-info p-4 m-0 mb-2">
-                            <div class="user-img" style="background-image: url(<?php echo _web_root ?>/assets/client/images/3.png);"></div>
+                        <a class="user-info p-4 m-0 mb-2" href="#">
+                            <div class="user-img" style="background-image: url(<?php echo _web_root; ?>/assets/client/images/3.png);"></div>
                             <div class="d-flex align-items-center ms-3">
                                 <span class="user-name">User name</span>
                             </div>
-                        </div>
+                        </a>
                         <div class="p-0 m-0">
                             <div>
                                 <a class="nav-link p-2 px-4" href="#">
@@ -189,10 +189,10 @@
                     <a class="focus-item carousel-item carousel-slide-1 active " href="1">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="../assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -217,10 +217,10 @@
                     <a class="focus-item carousel-item carousel-slide-2 " href="#">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/2.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/2.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -237,10 +237,10 @@
                     <a class="focus-item carousel-item carousel-slide-3 " href="#">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="../assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/3.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/3.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -257,10 +257,10 @@
                     <a class="focus-item carousel-item carousel-slide-4 " href="#">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/1.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/1.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -277,10 +277,10 @@
                     <a class="focus-item carousel-item carousel-slide-5 " href="#">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="../assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/2.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/login/images/ab44954c581b1a66_8af2eb6daf6fa0eb_3486616579698801118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/2.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -297,10 +297,10 @@
                     <a class="focus-item carousel-item carousel-slide-6 " href="#">
                         <div class="vertical-layer"></div>
                         <div class="horizontal-layer"></div>
-                        <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
-                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root ?>/assets/client/images/3.png');"></div>
+                        <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="d-block focus-img" alt="...">
+                        <div class="focus-img-character" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/3.png');"></div>
                         <div class="focus-decs-wrapper">
-                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root ?>/assets/client/images/logo-with-brand.png');"></div>
+                            <div class="focus-item-name" style="background-image: url('<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png');"></div>
                             <div class="d-flex text-black mb-2">
                                 <div class="focus-item-score"><i class="fa-solid fa-star"></i> 5.0</div>
                                 <div class="focus-item-year">2023</div>
@@ -331,7 +331,7 @@
                         <div class="owl-stage pt-3">
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -339,7 +339,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -347,7 +347,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -355,7 +355,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -363,7 +363,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -371,7 +371,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -379,7 +379,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -387,7 +387,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -395,7 +395,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -403,7 +403,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -411,104 +411,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-slider mb-5">
-                <h2 class="title m-0">Title</h2>
-                <div class="owl-carousel owl-theme owl-loaded">
-                    <div class="owl-stage-outer">
-                        <div class="owl-stage pt-3">
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                    <div class="p-1">
-                                        <p class="card-text">Anime Name</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="owl-item">
-                                <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -525,7 +428,7 @@
                         <div class="owl-stage pt-3">
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -533,7 +436,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -541,7 +444,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -549,7 +452,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -557,7 +460,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -565,7 +468,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -573,7 +476,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -581,7 +484,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -589,7 +492,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -597,7 +500,7 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -605,7 +508,104 @@
                             </div>
                             <div class="owl-item">
                                 <a id="animeId" class="card" target='_blank' href="#">
-                                    <img src="<?php echo _web_root ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-slider mb-5">
+                <h2 class="title m-0">Title</h2>
+                <div class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage pt-3">
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
                                     <div class="p-1">
                                         <p class="card-text">Anime Name</p>
                                     </div>
@@ -623,7 +623,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="<?php echo _web_root ?>/assets/client/js/main.js"></script>
+    <script src="<?php echo _web_root; ?>/assets/client/js/main.js"></script>
 </body>
 
 </html>

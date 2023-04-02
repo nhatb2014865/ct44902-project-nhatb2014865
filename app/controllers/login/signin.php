@@ -7,7 +7,7 @@ class signin extends controller
     {
         $model = self::getModel($this->modelName);
 
-        $model->getUserData();
+        $model->index();
 
         self::render('layouts/loginLayouts/signin');
     }

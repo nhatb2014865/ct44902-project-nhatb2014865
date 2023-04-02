@@ -45,7 +45,8 @@ class database
     public function selectDB($table, $selectField, $condition)
     {
         $query = "SELECT $selectField FROM $table $condition";
-        self::runQuery($query);
+        $pdo_Obj = self::runQuery($query,array($table));
+        return $pdo_Obj;
     }
 
     public function insertDB($table, $selectField, $values)
