@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up | Bliibii TV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo _web_root ?>/assets/login/css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row justify-content-end">
             <div class="signin-container-left col p-3">
-                <div id="carousel" class="carousel slide position-relative translate-middle-y top-50" data-bs-ride="carousel" data-ride-interval="6000">
+                <div id="carousel" class="carouFsel slide position-relative translate-middle-y top-50" data-bs-ride="carousel" data-ride-interval="6000">
                     <h2 class="text-secondary text-center mb-3">Hi guest !!</h2>
                     <h3 class="text-secondary text-center mb-3">Get started with your Bliibii account today.</h3>
                     <div class="carousel-inner rounded">
@@ -46,34 +46,37 @@
                     </div>
                     <div class="row">
                         <div>
-                            <p class="fw-semibold text-center mb-3">Create account with</p>
-                        </div>
-                        <div class="d-grid mb-3">
-                            <a class="btn btn-primary" role="button"><i class="fa-brands fa-facebook-f pe-auto"></i> Facebook</a>
-                        </div>
-                        <div class="d-grid mb-3">
-                            <a class="btn btn-danger" role="button"><i class="fa-brands fa-google"></i> Google</a>
-                        </div>
-                        <div>
-                            <p class="fw-semibold text-center m-0">or sign up with email</p>
-                        </div>
-                        <div class="d-flex mb-3 justify-content-center">
-                            <p class="fs-sm m-0 me-1">Already have an account? </p>
-                            <a href="#" class="link-5a5d60 text-decoration-none fs-sml fw-semibold">Sign in</a>
+                            <p class="fw-semibold text-center mb-3">Create account with Email</p>
                         </div>
                     </div>
                     <div class="row">
-                        <form>
+                        <form method="post" action="signup">
                             <div class="position-relative mb-3">
-                                <label for="InputEmail1" class="form-label form-float-label">Email</label>
-                                <input type="email" class="form-control form-control-secondary" id="InputEmail1" aria-describedby="emailHelp">
+                                <label for="InputEmail" class="form-label form-float-label">Email</label>
+                                <input name="user_email" type="email" class="form-control form-control-secondary <?php if (!empty($errors['user_email'])) echo 'border-danger'; ?>" id="InputEmail" aria-describedby="emailHelp" value="<?php if (!empty($oldData['user_email'])) echo $oldData['user_email']; ?>">
+                                <?php if (!empty($errors['user_email'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['user_email'] . '</span>'; ?>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label for="name" class="form-label form-float-label">Name (6+ characters)</label>
+                                <input name="user_name" type="text" class="form-control form-control-secondary <?php if (!empty($errors['user_name'])) echo 'border-danger'; ?>" id="name" value="<?php if (!empty($oldData['user_name'])) echo $oldData['user_name']; ?>">
+                                <?php if (!empty($errors['user_name'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['user_name'] . '</span>'; ?>
                             </div>
                             <div class="position-relative mb-3">
                                 <label for="InputPassword" class="form-label form-float-label">Password (8+ characters)</label>
-                                <input type="password" class="form-control form-control-secondary" id="InputPassword">
+                                <input name="user_password" type="password" class="form-control form-control-secondary <?php if (!empty($errors['user_password'])) echo 'border-danger'; ?>" id="InputPassword">
+                                <?php if (!empty($errors['user_password'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['user_password'] . '</span>'; ?>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label for="InputComfirmPassword" class="form-label form-float-label">Comfirm password (8+ characters)</label>
+                                <input name="comfirmPassword" type="password" class="form-control form-control-secondary <?php if (!empty($errors['comfirmPassword'])) echo 'border-danger'; ?>" id="InputComfirmPassword">
+                                <?php if (!empty($errors['comfirmPassword'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['comfirmPassword'] . '</span>'; ?>
                             </div>
                             <div class="d-grid mb-3">
                                 <button type="submit" class="btn btn-6bc3e7">Create account</button>
+                            </div>
+                            <div class="d-flex mb-3 justify-content-center">
+                                <p class="fs-sm m-0 me-1">Already have an account? </p>
+                                <a href="signin" class="link-5a5d60 text-decoration-none fs-sml fw-semibold">Sign in</a>
                             </div>
                         </form>
                     </div>

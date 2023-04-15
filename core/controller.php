@@ -3,7 +3,7 @@ class controller
 {
     public static function getModel($modelUrl)
     {
-        require _dir_root . '/models/' . $modelUrl . '.php';
+        require _dir_root . '/app/models/' . $modelUrl . '.php';
         $model = array_filter(explode('/', $modelUrl));
         $model = $model[array_key_last($model)];
         $model = new $model();
@@ -13,6 +13,6 @@ class controller
     public static function render($view, $data = [])
     {
         extract($data);
-        require '' . _dir_root . '/views/' . $view . '.php';
+        require '' . _dir_root . '/app/views/' . $view . '.php';
     }
 }

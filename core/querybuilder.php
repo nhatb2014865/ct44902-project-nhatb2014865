@@ -70,16 +70,20 @@ trait querybuilder
     protected function select($selectField)
     {
         if (!empty($selectField)) {
-            $this->selectField = $selectField;
+            $this->selectField =  $selectField;
+            if (is_array($selectField))
+                $this->selectField = implode(',', $this->selectField);
         }
         return $this;
     }
 
-    protected function values($values_Arr = [])
+    protected function values($values = [])
     {
-        foreach ($values_Arr as $value) {
-            $this->values .= "'$value',";
-        }
+        if (is_array($values))
+            foreach ($values as $value) {
+                $this->values .= "'$value',";
+            }
+        else $this->values = "'$values'";
         $this->values = rtrim($this->values, ',');
         return $this;
     }

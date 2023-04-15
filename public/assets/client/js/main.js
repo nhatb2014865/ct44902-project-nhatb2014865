@@ -1,5 +1,26 @@
 window.addEventListener('scroll', scrolled);
 
+const logoutBtn = $('.logout-btn');
+if (logoutBtn) {
+    logoutBtn.click(function () {
+        $.ajax({
+            type: 'post',
+            url: "signout",
+            success: function (response) {
+                if (response == 'success') {
+                    window.location.reload();
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+                console.log(error);
+                console.log(status);
+                console.log(xhr);
+            }
+        });
+    })
+}
+
 function scrolled(event) {
     const navbar = $(".navbar");
     if (navbar.length && window.pageYOffset > 50) {

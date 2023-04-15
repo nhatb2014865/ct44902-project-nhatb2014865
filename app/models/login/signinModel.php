@@ -1,14 +1,19 @@
 <?php
 class signinModel extends model
 {
-    public function index()
+    public function verify($table, $field, $value)
     {
-        // var_dump($this->table('tb_user')->where('fullname','=','someone')->delete());
-        // var_dump($this->table('tb_user')->select('username,password,fullname')->values(array('guest', '000000', 'someone'))->insert());
-        // print_r($this->request->getField());
+        return $this->select($field)->table($table)->where($field, '=', $value)->get();
     }
 
-    public function getUserData()
+    public function getUserData($field)
     {
+        $table = 'tb_user';
+        $query =  $this->table($table);
+        foreach ($field as $key => $value) {
+            $query = $query->where($key, '=', $value);
+        }
+        $data = $query->get();
+        return  reset($data);
     }
 }

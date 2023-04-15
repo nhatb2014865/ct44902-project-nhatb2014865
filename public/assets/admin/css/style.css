@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.form-error-span{
+    color: red;
+    font-size: 12px !important;
+}
+.form-success-span{
+    color: green;
+    font-size: 12px !important;
+}
+
 :focus-visible {
     outline: none !important;
 }
@@ -342,6 +351,8 @@
 }
 
 .option-bar .option-item {
+    text-decoration: none;
+    display: block;
     padding: 5px 16px;
     cursor: pointer;
     color: #5a5d60;
@@ -389,6 +400,7 @@
 }
 
 .data-tb .data-tb-col.modify a {
+    cursor: pointer;
     text-decoration: none;
     color: #33a0cb;
 }

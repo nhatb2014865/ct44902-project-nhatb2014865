@@ -1,7 +1,7 @@
 <?php
 class response
 {
-    public function redirect($uri = '')
+    public static function redirect($uri = '')
     {
         if (preg_match('~^(http|https)~is', $uri)) {
             $uri = $uri;

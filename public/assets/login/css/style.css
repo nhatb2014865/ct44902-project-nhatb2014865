@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.form-error-span{
+    color: red;
+    font-size: 12px !important;
+}
+
 /* ## webkit-scrollbar style start ## */
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
