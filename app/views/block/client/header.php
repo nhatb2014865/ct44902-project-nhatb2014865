@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php if(!empty($title)) echo $title; ?></title>
+    <title><?php if (!empty($title)) echo $title; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
@@ -22,9 +22,11 @@
                 <img class="brand-logo" src="<?php echo _web_root; ?>/assets/client/images/logo-with-brand.png" alt="">
             </a>
             <div class="nav me-auto">
-                <div class="nav-item">
-                    <a class="nav-link px-0 pe-3 active" aria-current="page" href="#">Home</a>
-                </div>
+                <?php foreach ($category_names as $key => $category_name) {
+                    echo '<div class="nav-item">';
+                    echo '<a class="nav-link px-0 pe-3 active" aria-current="page" href="' . $category_name . '">' . $category_name . '</a>';
+                    echo '</div>';
+                } ?>
                 <div class="nav-item">
                     <a class="nav-link px-0 pe-3" href="#">Link</a>
                 </div>
@@ -32,24 +34,11 @@
                     <div class="nav-link dropdown-toggle px-0 me-3" aria-expanded="true"></div>
                     <div class="dropdown-menu">
                         <ul class="dropdown-container bg-e8f3ee">
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link" href="#">Link</a>
-                            </li>
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link" href="#">Link</a>
-                            </li>
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link" href="#">Link</a>
-                            </li>
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link" href="#">Link</a>
-                            </li>
-                            <li class="dropdown-item p-0">
-                                <a class=" nav-link" href="#">Link</a>
-                            </li>
+                            <?php foreach ($category_names as $key => $category_name) {
+                                echo '<li class="dropdown-item p-0">';
+                                echo '<a class="nav-link" aria-current="page" href="' . $category_name . '">' . $category_name . '</a>';
+                                echo  '</li>';
+                            } ?>
                         </ul>
                     </div>
                 </div>

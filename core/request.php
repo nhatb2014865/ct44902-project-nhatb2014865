@@ -61,7 +61,6 @@ class request
     public function validates()
     {
         $checkValidate = true;
-
         $this->__rules = array_filter($this->__rules);
         if (!empty($this->__rules)) {
             $dataField = $this->getField();
@@ -119,6 +118,29 @@ class request
                             $controller =  app::$app->getCurrentController();
                             if (method_exists($controller, 'checkUnique')) {
                                 $checkUnique = call_user_func_array([$controller, 'checkUnique'], [$tableName, $fieldCheck, $dataField[$fieldName]]);
+                                if ($checkUnique) {
+                                    $this->setError($fieldName, $ruleName);
+                                    $checkValidate = false;
+                                }
+                            }
+                        }
+                    }
+                    if ($ruleName == 'unique_array') {
+                        $tableName = null;
+                        $fieldCheck = null;
+                        if (!empty($ruleArr[1])) {
+                            $tableName = $ruleArr[1];
+                        }
+                        if (!empty($ruleArr[2])) {
+                            $fieldChecks = $ruleArr[2];
+                            $fieldChecks = explode('/', $fieldChecks);
+                        }
+                        if (!empty($tableName) && !empty($fieldChecks)) {
+                            $controller =  app::$app->getCurrentController();
+                            if (method_exists($controller, 'checkUniqueArray')) {
+                                foreach ($fieldChecks as $key => $fieldCheck)
+                                    $value[] = $dataField[$fieldCheck];
+                                $checkUnique = call_user_func_array([$controller, 'checkUniqueArray'], [$tableName, $fieldChecks, $value]);
                                 if ($checkUnique) {
                                     $this->setError($fieldName, $ruleName);
                                     $checkValidate = false;
@@ -190,5 +212,12 @@ class request
     public function setError($fieldName, $ruleName)
     {
         $this->__errors[$fieldName][$ruleName] = $this->__message[$fieldName . '.' . $ruleName];
+    }
+
+    public function upload()
+    {
+        $name = array_keys($_FILES);
+        $name = $name[0];
+        move_uploaded_file($_FILES[$name]['tmp_name'], _dir_root. '/public/uploads/' . $_FILES[$name]['name']);
     }
 }

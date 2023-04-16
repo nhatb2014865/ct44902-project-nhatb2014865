@@ -86,6 +86,11 @@
                                 <a class="nav-link <?php if ($currentPage == 'genre') echo 'active'; ?> " href="<?php echo _web_root; ?>/admin/genre">Genre</a>
                             </div>
                         </div>
+                        <div class="owl-item">
+                            <div class="nav-item">
+                                <a class="nav-link <?php if ($currentPage == 'anime') echo 'active'; ?> " href="<?php echo _web_root; ?>/admin/anime">Anime</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

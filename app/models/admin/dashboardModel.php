@@ -6,11 +6,16 @@ class dashboardModel extends model
         return $this->table('tb_category')->get();
     }
 
-    public function deleteCategory($data)
+    public function getGenre($data)
     {
-        extract($data);
-        $deleteStatus = $this->table('tb_category')->where($field, '=', $value)->delete();
-        return $deleteStatus;
+        foreach ($data as $field => $value)
+            return $this->table('tb_genre')->where($field, '=', $value)->get();
+    }
+
+    public function getAnime($data)
+    {
+        foreach ($data as $field => $value)
+            return $this->table('tb_anime')->where($field, '=', $value)->get();
     }
 
     public function addCategory($data)
@@ -21,10 +26,29 @@ class dashboardModel extends model
             return true;
         return false;
     }
-    
-    public function getGenre()
+
+    public function addGenre($data)
     {
-        return $this->table('tb_genre')->get();
+        foreach ($data as $field => $value) {
+            $fields[] = $field;
+            $values[] = $value;
+        }
+        $insertStatus = $this->table('tb_genre')->select($fields)->values($values)->insert();
+        if ($insertStatus)
+            return true;
+        return false;
+    }
+
+    public function addAnime($data)
+    {
+        foreach ($data as $field => $value) {
+            $fields[] = $field;
+            $values[] = $value;
+        }
+        $insertStatus = $this->table('tb_anime')->select($fields)->values($values)->insert();
+        if ($insertStatus)
+            return true;
+        return false;
     }
 
     public function deleteGenre($data)
@@ -34,13 +58,18 @@ class dashboardModel extends model
         return $deleteStatus;
     }
 
-    public function addGenre($data)
+    public function deleteAnime($data)
     {
-        foreach ($data as $field => $value)
-            $insertStatus = $this->table('tb_genre')->select($field)->values($value)->insert();
-        if ($insertStatus)
-            return true;
-        return false;
+        extract($data);
+        $deleteStatus = $this->table('tb_anime')->where($field, '=', $value)->delete();
+        return $deleteStatus;
+    }
+
+    public function deleteCategory($data)
+    {
+        extract($data);
+        $deleteStatus = $this->table('tb_category')->where($field, '=', $value)->delete();
+        return $deleteStatus;
     }
 
     public function checkUnique($table, $field, $value)
@@ -48,5 +77,29 @@ class dashboardModel extends model
         if (empty(($this->table($table)->select($field)->where($field, '=', $value)->get())))
             return false;
         return true;
+    }
+
+    public function checkUniqueArray($table, $fields, $values)
+    {
+        $query = $this->select($fields)->table($table);
+        foreach ($fields as $key => $value)
+            $query = $query->where($value, '=', $values[$key]);
+        if (empty($query->get()))
+            return false;
+        return true;
+    }
+
+    public function getCategoryName($data)
+    {
+        $data = $this->table('tb_category')->where('category_id', '=', $data)->get();
+        foreach ($data as $key => $value)
+            return $value['category_name'];
+    }
+
+    public function getGenreName($data)
+    {
+        $data = $this->table('tb_genre')->where('genre_id', '=', $data)->get();
+        foreach ($data as $key => $value)
+            return $value['genre_name'];
     }
 }
