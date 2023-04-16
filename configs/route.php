@@ -1,7 +1,8 @@
 <?php
 $__config['route'] = [
-    'home' => 'client/home',
-    'home/(.+)' => 'client/home/$1',
+    '(.+)' => 'client/home/index/$1',
+    'home/' => 'client/home/index',
+    'home/(.+)' => 'client/home/index/$1',
     'admin' => 'admin/dashboard/category',
     'admin/(.+)' => 'admin/dashboard/category/$1',
 

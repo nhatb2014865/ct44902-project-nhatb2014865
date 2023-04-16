@@ -1,4 +1,4 @@
-<?php self::render('block/client/header',$sub_content) ?>
+<?php self::render('block/client/header', $sub_content) ?>
 <div class="content">
     <div class="focus-wrapper m-0 p-0">
         <div id="focus-carousel" class="carousel slide carousel-fade" data-bs-ride="true" data-bs-interval="6000">
@@ -150,102 +150,106 @@
         </div>
     </div>
     <div class="row-sliders-container m-0">
-        <div class="row-slider mb-5">
-            <h2 class="title m-0">Title</h2>
-            <div class="owl-carousel owl-theme owl-loaded">
-                <div class="owl-stage-outer">
-                    <div class="owl-stage pt-3">
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a id="animeId" class="card" target='_blank' href="#">
-                                <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
-                                <div class="p-1">
-                                    <p class="card-text">Anime Name</p>
-                                </div>
-                            </a>
+        <?php if(!empty($genre_names)) :?>
+        <?php foreach ($genre_names as $key => $genre_name) : ?>
+            <div class="row-slider mb-5">
+                <h2 class="title m-0"><?php echo $genre_name ?></h2>
+                <div class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage pt-3">
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="owl-item">
+                                <a id="animeId" class="card" target='_blank' href="#">
+                                    <img src="<?php echo _web_root; ?>/assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg" class="card-img-top" alt="...">
+                                    <div class="p-1">
+                                        <p class="card-text">Anime Name</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach ?>
+        <?php endif ?>
     </div>
-<?php self::render('block/client/footer') ?>
+    <?php self::render('block/client/footer') ?>
