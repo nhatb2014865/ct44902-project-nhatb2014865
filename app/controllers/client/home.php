@@ -21,7 +21,6 @@ class home extends controller
             $this->data['genre_names'] = $this->model->getGenreName('For%20you');
         if (!empty($this->data['genre_names']))
             foreach ($this->data['genre_names'] as $key => $genre_name) {
-                print_r($genre_name);
                 // $this->data['animes'][$genre_name] = $this->model->getAnime($category);
             }
 

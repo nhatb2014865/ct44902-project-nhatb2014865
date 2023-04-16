@@ -15,7 +15,6 @@ class homeModel extends model
         if (!empty($data))
             foreach ($data as $key => $id)
                 $names = $this->table('tb_genre')->select('genre_name')->where('category_id', '=', $id['category_id'])->get();
-        print_r($names);
         $nameArr= [];
         if (!empty($names))
             foreach ($names as $key => $name)
