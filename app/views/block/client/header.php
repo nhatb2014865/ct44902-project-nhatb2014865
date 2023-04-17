@@ -53,30 +53,27 @@ else
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body bg-e8f3ee">
-                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php if(!empty($user)) echo _web_root.'/uploads/user.png'; else echo _web_root.'/assets/client/images/guest.png';?>)">
+                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php if (!empty($user)) echo _web_root . '/uploads/user.png';
+                                                                                                                    else echo _web_root . '/assets/client/images/guest.png'; ?>)">
                         <a class="nav-link dropdown-toggle" href="" aria-expanded="false"></a>
                         <div class="dropdown-menu p-0">
                             <div class="card user-panel dropdown-container" style="width: 18rem;">
                                 <div class="user-info p-3 m-0">
-                                    <div class="user-img" style="background-image: url(<?php if(!empty($user)) echo _web_root.'/uploads/user.png'; else echo _web_root.'/assets/client/images/guest.png' ?>)"></div>
+                                    <div class="user-img" style="background-image: url(<?php if (!empty($user)) echo _web_root . '/uploads/user.png';
+                                                                                        else echo _web_root . '/assets/client/images/guest.png' ?>)"></div>
                                     <div class="d-flex align-items-center ms-2">
-                                        <span class="user-name"><?php if(!empty($user)) echo $user['user_name']; else echo 'Guest' ?></span>
+                                        <span class="user-name"><?php if (!empty($user)) echo $user['user_name'];
+                                                                else echo 'Guest' ?></span>
                                     </div>
                                 </div>
                                 <ul class="card-body p-0 m-0">
                                     <li>
-                                        <a class="dropdown-item nav-link p-2 px-3" href="#">
-                                            <div class="row">
-                                                <div class="col-2"><i class="fa-solid fa-bookmark"></i></div>
-                                                <div class="col"><span class="">Watch later</span></div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo _web_root.'/signin' ?>" class="<?php if(!empty($user)) echo 'logout-btn'; else echo 'login-btn' ?> dropdown-item nav-link p-2 px-3">
+                                        <a href="<?php echo _web_root . '/signin' ?>" class="<?php if (!empty($user)) echo 'logout-btn';
+                                                                                            else echo 'login-btn' ?> dropdown-item nav-link p-2 px-3">
                                             <div class="row">
                                                 <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
-                                                <div class="col"><span class=""><?php if(!empty($user)) echo 'Log out'; else echo 'Log in' ?></span></div>
+                                                <div class="col"><span class=""><?php if (!empty($user)) echo 'Log out';
+                                                                                else echo 'Log in' ?></span></div>
                                             </div>
                                         </a>
                                     </li>
@@ -112,7 +109,8 @@ else
                                 <a class="logout-btn nav-link p-2 px-4">
                                     <div class="row">
                                         <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
-                                        <div class="col"><span class=""><?php if(!empty($user)) echo 'Log out'; else echo 'Log in' ?></span></div>
+                                        <div class="col"><span class=""><?php if (!empty($user)) echo 'Log out';
+                                                                        else echo 'Log in' ?></span></div>
                                     </div>
                                 </a>
                             </div>

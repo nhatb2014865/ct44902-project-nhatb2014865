@@ -77,7 +77,6 @@ if (navbar.length) {
         autoWidth: true,
         responsive: false
     });
-
 }
 
 const focus_Wrapper = $(".focus-wrapper");

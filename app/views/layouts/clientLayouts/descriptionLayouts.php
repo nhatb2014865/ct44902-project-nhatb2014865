@@ -33,10 +33,10 @@
         </div>
         <div class="episodes-list-wrapper container-fluid">
             <hr>
-            <?php if (!empty($episodes)) : ?>
-                <?php foreach ($episodes as  $key => $episode) : ?>
-                    <div class="row">
-                        <div class="col-xxl-2 col-lg-3 col-md-4 col-6 mb-3">
+            <div class="row">
+                <?php if (!empty($episodes)) : ?>
+                    <?php foreach ($episodes as  $key => $episode) : ?>
+                        <div class="col-xxl-2 col-lg-3 col-md-4 mb-3">
                             <a href="<?php echo _web_root . '/watch/' . $anime['anime_id'] . '-' . $anime['anime_name'] ?>-episode-<?php echo $episode['episode_num'] ?>" target='_blank' class="episode-wapper card">
                                 <img src="<?php echo _web_root . '/uploads/' . $episode['episode_img'] ?>" class="wrapper-img card-img-top" alt="...">
                                 <div class="play-icon"><i class="fa-solid fa-play"></i></div>
@@ -45,9 +45,9 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
-                <?php endforeach ?>
-            <?php endif ?>
+                    <?php endforeach ?>
+                <?php endif ?>
+            </div>
         </div>
     </div>
 <?php endif ?>
