@@ -1,11 +1,22 @@
 <?php
 $__config['route'] = [
-    '(.+)' => 'client/home/index/$1',
-    'home/' => 'client/home/index',
-    'home/(.+)' => 'client/home/index/$1',
+    '' => 'client/home/index',
+    '/' => 'client/home/index',
+    '(.+)' =>  'client/home/index/$1',
+    'home' => 'client/home/index',
+    'home/getAnimeInfo' => 'client/home/getAnimeInfo',
+    'home/getAnimeInfo/(.+)' => 'client/home/getAnimeInfo/$1',
+
+    'description' => 'client/description/index',
+    'description/(.+)' => 'client/description/index/$1',
+
+    'watch' => 'client/watch/index',
+    'watch/(.+)' => 'client/watch/index/$1',
+    'watch/(.+)-(.+)-episode-(.+)' => 'client/watch/index/$1/$2/$3',
+
+
     'admin' => 'admin/dashboard/category',
     'admin/(.+)' => 'admin/dashboard/category/$1',
-
     'admin/category' => 'admin/dashboard/category',
     'admin/category/(.+)' => 'admin/dashboard/category/$1',
     'admin/addCategory' => 'admin/dashboard/addCategory',
@@ -37,10 +48,21 @@ $__config['route'] = [
     'admin/getGenre' => 'admin/dashboard/getGenre',
     'admin/getGenre/(.+)' => 'admin/dashboard/getGenre/$1',
 
+    'admin/episode' => 'admin/dashboard/episode',
+    'admin/episode/(.+)' => 'admin/dashboard/episode/$1',
+    'admin/addEpisode' => 'admin/dashboard/addEpisode',
+    'admin/addEpisode/(.+)' => 'admin/dashboard/addEpisode/$1',
+    'admin/deleteEpisode' => 'admin/dashboard/deleteEpisode',
+    'admin/deleteEpisode/(.+)' => 'admin/dashboard/deleteEpisode/$1',
+    'admin/showEpisode' => 'admin/dashboard/showEpisode',
+    'admin/showEpisode/(.+)' => 'admin/dashboard/showEpisode/$1',
+    'admin/getAnime' => 'admin/dashboard/getAnime',
+    'admin/getAnime/(.+)' => 'admin/dashboard/getAnime/$1',
+
     'signout' => 'login/signout',
     'signout/(.+)' => 'login/signout/$1',
     'signin' => 'login/signin',
     'signin/(.+)' => 'login/signin/$1',
     'signup' => 'login/signup',
-    'signup/(.+)' => 'login/signup/$1'
+    'signup/(.+)' => 'login/signup/$1',
 ];

@@ -37,6 +37,10 @@ a {
     background: #5a5d60;
 }
 
+#video-player{
+    width: 100%;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 /* ## webkit-scrollbar style end ## */
 

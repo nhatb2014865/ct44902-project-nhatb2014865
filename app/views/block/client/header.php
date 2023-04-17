@@ -1,3 +1,9 @@
+<?php
+if (session::check('admin'))
+    $user = session::data('admin');
+else
+    $user = session::data('user');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="<?php echo _web_root; ?>/assets/client/css/style.css">
 </head>
 
@@ -24,19 +32,16 @@
             <div class="nav me-auto">
                 <?php foreach ($category_names as $key => $category_name) {
                     echo '<div class="nav-item">';
-                    echo '<a class="nav-link px-0 pe-3 active" aria-current="page" href="' . $category_name . '">' . $category_name . '</a>';
+                    echo '<a class="nav-link px-0 pe-3 active" aria-current="page" href="' . _web_root . '/' . $category_name . '">' . $category_name . '</a>';
                     echo '</div>';
                 } ?>
-                <div class="nav-item">
-                    <a class="nav-link px-0 pe-3" href="#">Link</a>
-                </div>
                 <div class="link-collapse nav-item dropdown-center">
                     <div class="nav-link dropdown-toggle px-0 me-3" aria-expanded="true"></div>
                     <div class="dropdown-menu">
                         <ul class="dropdown-container bg-e8f3ee">
                             <?php foreach ($category_names as $key => $category_name) {
                                 echo '<li class="dropdown-item p-0">';
-                                echo '<a class="nav-link" aria-current="page" href="' . $category_name . '">' . $category_name . '</a>';
+                                echo '<a class="nav-link" aria-current="page" href="' . _web_root . '/' . $category_name . '">' . $category_name . '</a>';
                                 echo  '</li>';
                             } ?>
                         </ul>
@@ -48,14 +53,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body bg-e8f3ee">
-                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php echo _web_root; ?>/assets/client/images/3.png);">
-                        <a class="nav-link dropdown-toggle" href="<?php echo _web_root; ?>/signin" aria-expanded="false"></a>
+                    <div class="user-side link-collapse nav-item dropdown-center me-3" style="background-image: url(<?php if(!empty($user)) echo _web_root.'/uploads/user.png'; else echo _web_root.'/assets/client/images/guest.png';?>)">
+                        <a class="nav-link dropdown-toggle" href="" aria-expanded="false"></a>
                         <div class="dropdown-menu p-0">
                             <div class="card user-panel dropdown-container" style="width: 18rem;">
                                 <div class="user-info p-3 m-0">
-                                    <div class="user-img" style="background-image: url(<?php echo _web_root; ?>/assets/client/images/3.png);"></div>
+                                    <div class="user-img" style="background-image: url(<?php if(!empty($user)) echo _web_root.'/uploads/user.png'; else echo _web_root.'/assets/client/images/guest.png' ?>)"></div>
                                     <div class="d-flex align-items-center ms-2">
-                                        <span class="user-name">User name</span>
+                                        <span class="user-name"><?php if(!empty($user)) echo $user['user_name']; else echo 'Guest' ?></span>
                                     </div>
                                 </div>
                                 <ul class="card-body p-0 m-0">
@@ -68,10 +73,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="logout-btn dropdown-item nav-link p-2 px-3">
+                                        <a href="<?php echo _web_root.'/signin' ?>" class="<?php if(!empty($user)) echo 'logout-btn'; else echo 'login-btn' ?> dropdown-item nav-link p-2 px-3">
                                             <div class="row">
                                                 <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
-                                                <div class="col"><span class="">Log out</span></div>
+                                                <div class="col"><span class=""><?php if(!empty($user)) echo 'Log out'; else echo 'Log in' ?></span></div>
                                             </div>
                                         </a>
                                     </li>
@@ -107,7 +112,7 @@
                                 <a class="logout-btn nav-link p-2 px-4">
                                     <div class="row">
                                         <div class="col-2"><i class="fa-solid fa-right-from-bracket"></i></div>
-                                        <div class="col"><span class="">Log out</span></div>
+                                        <div class="col"><span class=""><?php if(!empty($user)) echo 'Log out'; else echo 'Log in' ?></span></div>
                                     </div>
                                 </a>
                             </div>

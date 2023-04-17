@@ -5,7 +5,7 @@ if (logoutBtn) {
     logoutBtn.click(function () {
         $.ajax({
             type: 'post',
-            url: "signout",
+            url: "/signout",
             success: function (response) {
                 if (response == 'success') {
                     window.location.reload();
@@ -157,49 +157,6 @@ if (row_Sliders_Container.length) {
 
     $('.row-sliders-container .row-slider .owl-carousel .owl-nav>button.owl-next').html("<span aria-label='Previous'><i class='fa-solid fa-chevron-right'></i></span>");
     $('.row-sliders-container .row-slider .owl-carousel .owl-nav>button.owl-prev').html("<span aria-label='Previous'><i class='fa-solid fa-chevron-left'></i></span>");
-
-    $(".row-sliders-container .row-slider .owl-carousel .owl-stage-outer .owl-item .card").bind({
-        mouseenter: function () {
-            if ($(window).width() >= 768) {
-                activeAnimeInfoPopup($(this));
-                $(".anime-info-popup").bind({
-                    mouseleave: function () {
-                        inActiveAnimeInfoPopup();
-                    }
-                });
-            }
-        }
-    });
-
-    function inActiveAnimeInfoPopup() {
-        $(".anime-info-popup").remove();
-    }
-
-    function activeAnimeInfoPopup(element) {
-        var obj = element.offset();
-        var h = element.height();
-        var w = element.width();
-        console.log(element[0].id);
-        $("body").append("" +
-            "<a class='anime-info-popup card' href='#' target='_blank' " +
-            "style='position: absolute; top:" + obj.top + "px; left:" + obj.left + "px; z-index : 100; height : " + h + "px;width : " + w + "px;'>" +
-            "<img src='../assets/client/images/24c3216a869d1a40_2d7a95d90fc58953_3374916729351087118684.jpg' class='card-img-top' alt='...''>" +
-            "<div class='info-container card-body'>" +
-            "<div class='info-name text-start'>Anime name</div>" +
-            "<div class='d-flex text-black mb-1'>" +
-            "<div class='info-item-score'><i class='fa-solid fa-star'></i> 5.0</div>" +
-            "<div class='info-item-year'>2023</div>" +
-            "<div class='info-item-update'>12 Episode</div>" +
-            "</div>" +
-            "<div class='d-flex info-category mb-1'>" +
-            "<div class='info-item-category me-1 px-1'>category1</div>" +
-            "<div class='info-item-category me-1 px-1'>category2</div>" +
-            "</div>" +
-            "<div class='info-item-description text-black' > Lorem ipsum dolor sit amet consectetur adipisicing elit.Ut aliquid velit dolorum.Aperiam provident labore ipsa deleniti ut commodi non, facere esse quaerat alias eligendi, perferendis saepe, vero corporis dolorum.</div > " +
-            "</div>" +
-            "</a>" +
-            "");
-    }
 }
 
 const info_Focus_Wrapper = $(".info-focus-wrapper");
@@ -300,17 +257,18 @@ if (watch_Area_Container.length) {
         $(".watch-area-info .player-info-ctn .rating-ctn .own-rating .dropdown-menu").removeClass("show").parent().find(".dropdown-toggle").addClass("rated").html("<span>" + $("#" + item).val() + "/5 Edit rating</span>");
     });
 
-    $(".watch-area-info .player-info-ctn .show-more").click(function () {
-        var ctn = $(".watch-area-info .player-info-ctn .player-desc");
-        if ($(this).hasClass("expand")) {
-            $(this).removeClass("expand");
-            ctn.removeClass("show");
-        } else {
-            $(this).addClass("expand");
-            ctn.addClass("show");
-        }
-
-    });
+    window.onload = function () {
+        $(".watch-area-info .player-info-ctn .show-more").click(function () {
+            var ctn = $(".watch-area-info .player-info-ctn .player-desc");
+            if ($(this).hasClass("expand")) {
+                $(this).removeClass("expand");
+                ctn.removeClass("show");
+            } else {
+                $(this).addClass("expand");
+                ctn.addClass("show");
+            }
+        });
+    }
 }
 
 const back_To_Top_Btn = $(".back-to-top-btn");

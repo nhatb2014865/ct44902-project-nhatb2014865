@@ -218,6 +218,13 @@ class request
     {
         $name = array_keys($_FILES);
         $name = $name[0];
-        move_uploaded_file($_FILES[$name]['tmp_name'], _dir_root. '/public/uploads/' . $_FILES[$name]['name']);
+        move_uploaded_file($_FILES[$name]['tmp_name'], _dir_root . '/public/uploads/' . $_FILES[$name]['name']);
+    }
+
+    public function upload2()
+    {
+        $name = array_keys($_FILES);
+        $name = $name[1];
+        move_uploaded_file($_FILES[$name]['tmp_name'], _dir_root . '/public/uploads/' . $_FILES[$name]['name']);
     }
 }

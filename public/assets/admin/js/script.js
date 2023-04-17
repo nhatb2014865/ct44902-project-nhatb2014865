@@ -211,6 +211,77 @@ if (choseGenre) {
     })
 }
 
+const choseAnimeBtn = $('#anime-select');
+if (choseAnimeBtn) {
+    choseAnimeBtn.focus(function () {
+        $.ajax({
+            type: 'post',
+            url: "/admin/getAnime",
+            success: function (response) {
+                console.log(response);
+                $('#anime-select').html(response);
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+                console.log(error);
+                console.log(status);
+                console.log(xhr);
+            }
+        });
+    })
+}
+
+const choseAnime = $('#anime-select');
+if (choseAnime) {
+    choseAnime.change(function () {
+        if ($('#anime-select').val() != null) {
+            var id = $('#anime-select').val();
+        }
+        $.ajax({
+            type: 'post',
+            url: "/admin/showEpisode",
+            data: {
+                anime_id: id
+            },
+            success: function (response) {
+                $('#episode-ctn').html(response);
+                const deleteEpisodeBtn = $('.delete-episode-btn');
+                if (deleteEpisodeBtn) {
+                    deleteEpisodeBtn.click(function () {
+                        var id = $(this).attr('tb-data-id');
+                        deleteElement = $(this).parent().parent();
+                        $.ajax({
+                            type: 'post',
+                            url: "/admin/deleteEpisode",
+                            data: {
+                                field: 'episode_id',
+                                value: id
+                            },
+                            success: function (response) {
+                                if (response == 'success') {
+                                    deleteElement.remove()
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.log(xhr.responseText);
+                                console.log(error);
+                                console.log(status);
+                                console.log(xhr);
+                            }
+                        });
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+                console.log(error);
+                console.log(status);
+                console.log(xhr);
+            }
+        });
+    })
+}
+
 const navbar = $(".navbar");
 if (navbar.length) {
     $(".navbar .link-collapse").mouseenter(function () {

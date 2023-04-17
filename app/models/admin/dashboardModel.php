@@ -14,8 +14,17 @@ class dashboardModel extends model
 
     public function getAnime($data)
     {
+        if (empty($data)) {
+                return $this->table('tb_anime')->get();
+        }
         foreach ($data as $field => $value)
             return $this->table('tb_anime')->where($field, '=', $value)->get();
+    }
+
+    public function getEpisode($data)
+    {
+        foreach ($data as $field => $value)
+            return $this->table('tb_episode')->where($field, '=', $value)->get();
     }
 
     public function addCategory($data)
@@ -51,6 +60,18 @@ class dashboardModel extends model
         return false;
     }
 
+    public function addEpisode($data)
+    {
+        foreach ($data as $field => $value) {
+            $fields[] = $field;
+            $values[] = $value;
+        }
+        $insertStatus = $this->table('tb_episode')->select($fields)->values($values)->insert();
+        if ($insertStatus)
+            return true;
+        return false;
+    }
+
     public function deleteGenre($data)
     {
         extract($data);
@@ -62,6 +83,12 @@ class dashboardModel extends model
     {
         extract($data);
         $deleteStatus = $this->table('tb_anime')->where($field, '=', $value)->delete();
+        return $deleteStatus;
+    }
+    public function deleteEpisode($data)
+    {
+        extract($data);
+        $deleteStatus = $this->table('tb_episode')->where($field, '=', $value)->delete();
         return $deleteStatus;
     }
 

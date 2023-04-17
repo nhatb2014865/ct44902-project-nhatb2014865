@@ -33,19 +33,34 @@
             <?php if (!empty($success)) echo '<span class="form-success-span"><i class="fa-solid fa-exclamation"></i> ' . $success . '</span>'; ?>
         </div>
         <div class="my-3">
-            <label for="link" class="form-label">Link Anime</label>
-            <input name="anime_link" type="text" class="form-control <?php if (!empty($errors['anime_link'])) echo 'border-danger'; ?>" id="link" value="<?php if (!empty($oldData['anime_link'])) echo $oldData['anime_link']; ?>">
-            <?php if (!empty($errors['anime_link'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_link'] . '</span>'; ?>
-        </div>
-        <div class="my-3">
             <label for="des" class="form-label">Description</label>
             <input name="anime_des" type="text" class="form-control <?php if (!empty($errors['anime_des'])) echo 'border-danger'; ?>" id="des" value="<?php if (!empty($oldData['anime_des'])) echo $oldData['anime_des']; ?>">
             <?php if (!empty($errors['anime_des'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_des'] . '</span>'; ?>
         </div>
         <div class="my-3">
+            <label for="anime_year" class="form-label">Year</label>
+            <input name="anime_year" type="text" class="form-control <?php if (!empty($errors['anime_year'])) echo 'border-danger'; ?>" id="anime_year" value="<?php if (!empty($oldData['anime_year'])) echo $oldData['anime_year']; ?>">
+            <?php if (!empty($errors['anime_year'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_year'] . '</span>'; ?>
+        </div>
+        <div class="my-3">
+            <label for="anime_episode" class="form-label">Number Episode</label>
+            <input name="anime_episode" type="text" class="form-control <?php if (!empty($errors['anime_episode'])) echo 'border-danger'; ?>" id="anime_episode" value="<?php if (!empty($oldData['anime_episode'])) echo $oldData['anime_episode']; ?>">
+            <?php if (!empty($errors['anime_episode'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_episode'] . '</span>'; ?>
+        </div>
+        <div class="my-3">
+            <label for="anime_dir" class="form-label">Directory</label>
+            <input name="anime_dir" type="text" class="form-control <?php if (!empty($errors['anime_dir'])) echo 'border-danger'; ?>" id="anime_dir" value="<?php if (!empty($oldData['anime_dir'])) echo $oldData['anime_dir']; ?>">
+            <?php if (!empty($errors['anime_dir'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_dir'] . '</span>'; ?>
+        </div>
+        <div class="my-3">
             <label for="anime_file" class="form-label">Thumnail Image</label>
             <input name="anime_file" type="file" class="form-control <?php if (!empty($errors['anime_file'])) echo 'border-danger'; ?>" id="anime_file">
             <?php if (!empty($errors['anime_file'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_file'] . '</span>'; ?>
+        </div>
+        <div class="my-3">
+            <label for="anime_img" class="form-label">Row Img</label>
+            <input name="anime_img" type="file" class="form-control <?php if (!empty($errors['anime_img'])) echo 'border-danger'; ?>" id="anime_img">
+            <?php if (!empty($errors['anime_img'])) echo '<span class="form-error-span"><i class="fa-solid fa-exclamation"></i> ' . $errors['anime_img'] . '</span>'; ?>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
